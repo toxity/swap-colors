@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rm -rf ./lib",
     "build": "$(npm bin)/babel src -d lib --presets babel-preset-es2015",
-    "postbuild": "$(npm bin)/uglifyjs ./lib/swapColors.js -o ./lib/swapColors.min.js",
+    "postbuild": "$(npm bin)/uglifyjs ./lib/swap-colors.js -o ./lib/swap-colors.min.js",
     "prepublish": "npm run test",
     "test": "mocha -d tests --compilers js:babel-core/register"
   },

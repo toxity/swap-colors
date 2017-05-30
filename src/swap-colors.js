@@ -122,10 +122,17 @@ const colorChanger = (img, options) => {
     }
 };
 (function () {
-    if (typeof window !== 'object' ) {
-        console.error("Can't find window!");
-        return;
+    if ((typeof module !== "undefined" && module !== null) && (module.exports !== null)) {
+        module.exports = colorChanger;
     }
 
-    window.swapColor = colorChanger;
-})();
+    if (typeof define === 'function' && define.amd) {
+        define([], function() {
+            return colorChanger;
+        });
+    } else {
+        const root = typeof exports !== "undefined" && exports !== null ? exports : this;
+        root.swapColors = colorChanger;
+    }
+
+}).call(this);

@@ -1,7 +1,7 @@
 {
   "name": "swap-colors",
   "description": "simple lib to swap colors on image",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": {
     "name": "Ivan Minich",
     "email": "minich.job@gmail.com"
